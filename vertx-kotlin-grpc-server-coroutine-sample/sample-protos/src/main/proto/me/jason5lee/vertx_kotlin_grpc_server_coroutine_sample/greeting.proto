@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "me.jason5lee.vertx_kotlin_grpc_server_coroutine_sample";
+option java_outer_classname = "GreetingProto";
+
+package greeting;
+
+service GreetingService {
+    rpc Greet(GreetRequest) returns (GreetResponse) {}
+}
+
+message GreetRequest {
+    string name = 1;
+}
+
+message GreetResponse {
+  string message = 1;
+}
